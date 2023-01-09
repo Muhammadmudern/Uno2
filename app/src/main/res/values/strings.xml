@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Uno1</string>
+    <string name="Version">v1.0.1</string>
+    <string name="AccessCode">Код доступа</string>
+    <string name="forget_password">Забыли код доступа?</string>
+    <string name="_1">1</string>
+    <string name="todo">TODO</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="_10">10</string>
+    <string name="action_settings">Settings</string>
+    <string name="RestartPassText">Востоновления пароля</string>
+    <string name="sms_email">Мы отправим вам SMS с проверечным кодом на ваш email</string>
+    <string name="title_activity_large_main_page">Large_MainPage</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Waiter">Официант</string>
+</resources>
