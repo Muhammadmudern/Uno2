@@ -11,5 +11,7 @@
     <color name="grey">#6A6A6A</color>
     <color name="blue">#002357</color>
     <color name="disabled_color">#999999</color>
+    <color name="table">#BCBCBC</color>
+    <color name="close_item">#2C98F0</color>
 
 </resources>

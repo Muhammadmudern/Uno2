@@ -5,9 +5,9 @@ import androidx.lifecycle.ViewModel
 import com.example.uno2.Data.ShopListRepositoryImpl
 import com.example.uno2.Domain.*
 
-class MainViewModel: ViewModel() {
+class MainViewModel : ViewModel() {
     private val repository = ShopListRepositoryImpl
-    private val getShopListUseCase =GetShopListUseCase(repository)
+    private val getShopListUseCase = GetShopListUseCase(repository)
     private val deleteShopItemUseCase = DeleteShopItemUseCase(repository)
     private val editShopItemUseCase = EditShopItemUseCase(repository)
     val shopList = getShopListUseCase.getShopList()

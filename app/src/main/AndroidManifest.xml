@@ -14,22 +14,34 @@
         android:theme="@style/Theme.Uno2"
         tools:targetApi="31">
         <activity
+            android:name=".ActionBottomDialogMainActivityItemPackage"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity2DELETE"
+            android:exported="false" />
+        <activity
+            android:name=".ShopItemAddActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ShopPage"
+            android:exported="false" />
+        <activity
             android:name=".Large_Main_Page"
             android:exported="false"
             android:label="@string/title_activity_large_main_page"
-            android:theme="@style/Theme.AppCompat.Light" />
+            android:theme="@style/Theme.AppCompat.DayNight" />
         <activity
             android:name=".ForgetPassword"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light" />
+            android:theme="@style/Theme.AppCompat.DayNight" />
         <activity
             android:name=".PasswordPage"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light" />
+            android:theme="@style/Theme.AppCompat.DayNight" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light">
+            android:theme="@style/Theme.AppCompat.DayNight">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

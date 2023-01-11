@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayoutOnMainAddPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FragmentShopItemAdd"
+    android:background="@color/white"
+    app:defaultNavHost = "true"
+    >
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_page"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout2">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="42dp"
+                app:srcCompat="@drawable/vector" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:text="Официант"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-96dp"
+                android:layout_marginTop="43dp"
+                android:layout_marginBottom="10dp"
+                android:text="Стол2"
+                android:textColor="@color/table"
+                android:textSize="14dp" />
+
+
+        </TableRow>
+    </TableLayout>
+
+
+    <TableRow
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="110dp">
+
+        <TextView
+            android:id="@+id/nazvnyetitle"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="15dp"
+            android:gravity="center"
+            android:text="Название"
+            android:textColor="@color/grey"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/paymenttitle"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="65dp"
+            android:gravity="center"
+            android:text="Цена"
+            android:textColor="@color/grey"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/counttitle"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="75dp"
+            android:gravity="center"
+            android:text="Количество"
+            android:textColor="@color/grey"
+            android:textSize="12dp" />
+    </TableRow>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="140dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/add_new_item"
+        android:layout_width="51dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="640dp"
+        android:background="@drawable/circle_button" />
+
+    <Button
+        android:id="@+id/buttonclose_item"
+        android:layout_width="151dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="660dp"
+        android:backgroundTint="@color/close_item"
+        android:gravity="center"
+        android:text="ЗАКРЫТЬ СЧЕТ"
+        android:textColor="@color/white"
+        android:textSize="12dp" />
+
+    <Button
+        android:id="@+id/buttonfinal_count"
+        android:layout_width="151dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="620dp"
+        android:backgroundTint="@color/disabled_color"
+        android:gravity="center"
+        android:text="ИТОГ: 0"
+        android:textColor="@color/white"
+        android:textSize="14dp" />
+
+
+</FrameLayout>
