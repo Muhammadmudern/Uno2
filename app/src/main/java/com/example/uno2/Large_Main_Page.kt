@@ -16,16 +16,18 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.uno2.Domain.ShopItem
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import kotlinx.android.synthetic.main.fragment_1.*
 
 class Large_Main_Page : AppCompatActivity() {
     private lateinit var tabLayout: TabLayout
     private lateinit var viewPager2: ViewPager2
     private lateinit var adapter: FragmentAdapter
-
+    @SuppressLint("ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_large_main_page2)
         supportActionBar?.hide()
+
         tabLayout = findViewById(R.id.tab_layout)
         viewPager2 = findViewById(R.id.view_pager)
         adapter = FragmentAdapter(supportFragmentManager, lifecycle)
@@ -51,5 +53,4 @@ class Large_Main_Page : AppCompatActivity() {
             }
         }.attach()
     }
-
 }

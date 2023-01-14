@@ -11,34 +11,36 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.uno2.Domain.ShopItem
 
 class Fragment1 : Fragment(){
-    private lateinit var viewModel: MainViewModel
-    private lateinit var shopListLinerLayout: LinearLayout
+    private lateinit var viewModel: Large_Main_Page_Model
+    private lateinit var ll_shopList_ena: LinearLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProvider(this)[MainViewModel::class.java]
-        viewModel.shopList.observe(this){
-            showList(it)
-        }
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_1, container, false)
+        val view = inflater.inflate(R.layout.fragment_1, container, false)
+        ll_shopList_ena = view.findViewById(R.id.ll_shopList_ena)
+        viewModel = ViewModelProvider(this)[Large_Main_Page_Model::class.java]
+        viewModel.shopList.observe(viewLifecycleOwner){
+            showList(it)
+        }
+        return view
     }
 
     private fun showList(list: List<ShopItem>){
-        shopListLinerLayout.removeAllViews()
-        for(shopItem  in list) {
-            val layoutId = if (shopItem.enabled) {
+        for(shopItem in list){
+            val layoutId = if(shopItem.enabled){
                 R.layout.enabled_item_shop
-            } else {
+            }else{
                 R.layout.disabled_item_shop
             }
-            val view = LayoutInflater.from(requireActivity().parent).inflate(layoutId, shopListLinerLayout, false)
-            shopListLinerLayout.addView(view)
+            val view = LayoutInflater.from(this@Fragment1.context).inflate(layoutId, ll_shopList_ena,false)
+            ll_shopList_ena.addView(view)
         }
     }
 

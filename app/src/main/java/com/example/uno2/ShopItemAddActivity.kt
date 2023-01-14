@@ -24,6 +24,7 @@ class ShopItemAddActivity : AppCompatActivity() {
 
 
         Lorem_Text =findViewById(R.id.recycle_view)
+
     }
 
     private fun setRecycleView() {

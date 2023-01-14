@@ -44,20 +44,15 @@ class FragmentShopItemAdd : Fragment() {
             mAlertDialog.show()
         }
 
-        bind.addNewItem.setOnClickListener { openButtomSheet1() }
+        bind.addNewItem.setOnClickListener { openButtomSheet3() }
 
 
         return bind.root
     }
 
-    fun openButtomSheet1(){
-        val addItemBottomDialogFragment = ActionButton.newInstace1()
-        addItemBottomDialogFragment.show(parentFragmentManager, ActionButton.TAG1)
-    }
-
-    fun openButtomSheet2(){
-        val addStuffBottomDialogFragment = ActionButton.newInstace2()
-        addStuffBottomDialogFragment.show(parentFragmentManager, ActionButton.TAG2)
+    fun openButtomSheet3(){
+        val addItemBottomDialogFragment = ActionButton.newInstace3()
+        addItemBottomDialogFragment.show(parentFragmentManager, ActionButton.TAG3)
     }
 
 }
