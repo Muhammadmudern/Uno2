@@ -131,32 +131,32 @@ open class PasswordPage : AppCompatActivity() {
                 startActivity(intent)
             }
             else{
-                Toast.makeText(applicationContext, "wrong", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "Пароль не верный", Toast.LENGTH_SHORT).show()
             }
         }
 
     }
 
     private fun OnPressBackSpace(){
-        clickOnBackSpace--
-        if (clickOnBackSpace < 0) {clickOnBackSpace = 4}
-        if(clickOnBackSpace == 0){
+        if(pressButton.size  == 1){
             val view_01 = findViewById<View>(R.id.view_01)
             view_01.setBackgroundResource(R.drawable.elipse_code)
-            pressButton.clear()
-            Toast.makeText(applicationContext, "List is empty ${pressButton.toString()}", Toast.LENGTH_SHORT).show()
+            pressButton.removeAt(pressButton.size-1)
         }
-        if(clickOnBackSpace == 1){
+        if(pressButton.size  == 2){
             val view_02 = findViewById<View>(R.id.view_02)
             view_02.setBackgroundResource(R.drawable.elipse_code)
+            pressButton.removeAt(pressButton.size-1)
         }
-        if (clickOnBackSpace == 2){
+        if (pressButton.size  == 3){
             val view_03 = findViewById<View>(R.id.view_03)
             view_03.setBackgroundResource(R.drawable.elipse_code)
+            pressButton.removeAt(pressButton.size-1)
         }
-        if(clickOnBackSpace == 3){
+        if(pressButton.size  == 4){
             val view_04 = findViewById<View>(R.id.view_04)
             view_04.setBackgroundResource(R.drawable.elipse_code)
+            pressButton.removeAt(pressButton.size-1)
         }
     }
 
