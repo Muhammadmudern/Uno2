@@ -1,4 +1,4 @@
-package com.example.uno2
+package com.example.uno2.Fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,9 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.navigation.fragment.findNavController
+import com.example.uno2.Actions.ActionButton
+import com.example.uno2.Large_Main_Page
 import com.example.uno2.databinding.FragmentShopItemAddBinding
-import kotlinx.android.synthetic.main.fragment_shop_item_add.*
 
 
 class FragmentShopItemAdd : Fragment() {

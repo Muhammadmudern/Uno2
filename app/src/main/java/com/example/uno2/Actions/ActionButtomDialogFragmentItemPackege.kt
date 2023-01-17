@@ -1,12 +1,10 @@
-package com.example.uno2
+package com.example.uno2.Actions
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.uno2.databinding.FragmentShopItemAddBinding
-import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.example.uno2.R
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.android.synthetic.main.item_add_packeges.view.*
 

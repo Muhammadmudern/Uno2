@@ -8,17 +8,17 @@
 
     <fragment
         android:id="@+id/fragment12"
-        android:name="com.example.uno2.Fragment1"
+        android:name="com.example.uno2.Fragments.Fragment1"
         android:label="fragment_1"
         tools:layout="@layout/fragment_1" />
     <fragment
         android:id="@+id/fragment2"
-        android:name="com.example.uno2.Fragment2"
+        android:name="com.example.uno2.Fragments.Fragment2"
         android:label="fragment_2"
         tools:layout="@layout/fragment_2" />
     <fragment
         android:id="@+id/fragment3"
-        android:name="com.example.uno2.Fragment3"
+        android:name="com.example.uno2.Fragments.Fragment3"
         android:label="fragment_3"
         tools:layout="@layout/fragment_3" />
 </navigation>

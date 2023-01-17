@@ -1,9 +1,11 @@
-package com.example.uno2
+package com.example.uno2.ModelsAndAdapters
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.uno2.Data.ShopListRepositoryImpl
-import com.example.uno2.Domain.*
+import com.example.uno2.Domain.DeleteShopItemUseCase
+import com.example.uno2.Domain.EditShopItemUseCase
+import com.example.uno2.Domain.GetShopListUseCase
+import com.example.uno2.Domain.ShopItem
 
 class MainViewModel : ViewModel() {
     private val repository = ShopListRepositoryImpl

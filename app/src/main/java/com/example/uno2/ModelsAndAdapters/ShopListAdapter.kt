@@ -1,4 +1,4 @@
-package com.example.uno2
+package com.example.uno2.ModelsAndAdapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.uno2.Domain.ShopItem
+import com.example.uno2.R
 
 class ShopListAdapter: RecyclerView.Adapter<ShopListAdapter.ShopListViewHolder>() {
     val list = listOf<ShopItem>()

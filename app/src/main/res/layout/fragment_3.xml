@@ -5,24 +5,25 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
-    tools:context=".Fragment3">
+    tools:context=".Fragments.Fragment3">
 
     <ScrollView
-        android:id="@+id/sv_shop_list"
+        android:id="@+id/sv_shop_list_ena"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:ignore="DuplicateIds">
         <LinearLayout
-            android:id="@+id/ll_shop_list3"
+            android:id="@+id/ll_shopList_ena"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"/>
+
     </ScrollView>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_shop_list3"
+        android:id="@+id/rv_shop_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

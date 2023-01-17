@@ -1,4 +1,4 @@
-package com.example.uno2
+package com.example.uno2.ModelsAndAdapters
 
 import androidx.lifecycle.ViewModel
 import com.example.uno2.Data.ShopListRepositoryImpl

@@ -1,4 +1,4 @@
-package com.example.uno2
+package com.example.uno2.ModelsAndAdapters
 
 class PaymentModel(s: String, s1: String, i: Int) {
     var nazvanye: String? = null

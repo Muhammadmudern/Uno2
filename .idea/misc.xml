@@ -3,6 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno/app/src/main/res/drawable/background_for_table.xml" value="0.2925" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno/app/src/main/res/drawable/bakcground_for_table_dis.xml" value="0.1985" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno/app/src/main/res/drawable/bg_oval_blue.xml" value="0.2925" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno/app/src/main/res/drawable/button_for_send_enail.xml" value="0.2925" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno/app/src/main/res/layout/activity_large_main_page2.xml" value="0.35778985507246375" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno/app/src/main/res/layout/add_main_dialog_page.xml" value="0.35778985507246375" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno/app/src/main/res/layout/disabled_item_shop.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno/app/src/main/res/layout/enabled_item_shop.xml" value="0.25" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno/app/src/main/res/layout/fragment_1.xml" value="0.35778985507246375" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno/app/src/main/res/layout/fragment_2.xml" value="0.35778985507246375" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno/app/src/main/res/layout/fragment_3.xml" value="0.35778985507246375" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno/app/src/main/res/layout/fragment_blank.xml" value="0.35778985507246375" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno/app/src/main/res/layout/fragment_number.xml" value="0.35778985507246375" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno2/app/src/main/res/drawable/bg_forgate_page.xml" value="0.357" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno2/app/src/main/res/drawable/bg_forget_page.xml" value="0.191" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno2/app/src/main/res/drawable/bg_oval_blue.xml" value="0.195" />

@@ -5,7 +5,7 @@
     android:id="@+id/activity_shop_item_add"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:name="com.example.uno2.FragmentShopItemAdd"
+    android:name="com.example.uno2.Fragments.FragmentShopItemAdd"
     tools:context=".ShopItemAddActivity"
     tools:layout ="@layout/fragment_shop_item_add">
 

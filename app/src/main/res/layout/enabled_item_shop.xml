@@ -4,80 +4,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    app:cardCornerRadius="4dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="4dp"
     app:cardElevation="1dp"
     android:backgroundTint="@color/white"
     app:cardUseCompatPadding="true">
 
 
     <LinearLayout
-        android:layout_marginLeft="10dp"
+        android:id="@+id/LinearLayoutTable1"
         android:layout_width="wrap_content"
-        android:layout_height="116dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/background_page"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_for_table"
         android:orientation="horizontal"
         android:padding="16dp">
 
-
         <TextView
-            android:id="@+id/tv_coun1"
-            android:layout_marginTop="-5dp"
+            android:id="@+id/tv_name1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="75dp"
-            android:textColor="@color/black"
+            android:layout_height="62dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold"
-            tools:text="1" />
+            tools:text="@string/_1" />
 
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/LinearLayoutTable2"
         android:layout_width="wrap_content"
-        android:layout_height="116dp"
-        android:layout_marginLeft="140dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/background_page"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_for_table"
+        android:layout_marginStart="110dp"
         android:orientation="horizontal"
         android:padding="16dp">
 
-
-
         <TextView
-            android:id="@+id/tv_coun2"
-            android:layout_marginTop="-5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="75dp"
+            android:id="@+id/tv_name2"
+            android:layout_width="0dp"
+            android:layout_height="62dp"
+            android:layout_weight="1"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold"
-            tools:text="2" />
+            tools:text="@string/_2" />
 
     </LinearLayout>
-
 
     <LinearLayout
+        android:id="@+id/LinearLayoutTable3"
         android:layout_width="wrap_content"
-        android:layout_height="116dp"
-        android:layout_marginLeft="270dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/background_page"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_for_table"
         android:orientation="horizontal"
+        android:layout_marginStart="220dp"
         android:padding="16dp">
 
-
         <TextView
-            android:id="@+id/tv_coun3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="75dp"
+            android:id="@+id/tv_name3"
+            android:layout_width="0dp"
+            android:layout_height="62dp"
+            android:layout_weight="1"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold"
-            tools:text="3" />
+            tools:text="@string/_3" />
 
     </LinearLayout>
+
+
 </androidx.cardview.widget.CardView>

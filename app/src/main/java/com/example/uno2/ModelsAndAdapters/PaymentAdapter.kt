@@ -1,4 +1,4 @@
-package com.example.uno2
+package com.example.uno2.ModelsAndAdapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.uno2.R
 
 class PaymentAdapter(var context: Context, var payment_list: List<PaymentModel>?) :
 RecyclerView.Adapter<PaymentAdapter.ViewHolder>(){
@@ -15,7 +16,7 @@ RecyclerView.Adapter<PaymentAdapter.ViewHolder>(){
         return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: PaymentAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         if (payment_list != null && payment_list!!.isNotEmpty()) {
             val model: PaymentModel = payment_list!![position]
             holder.nazvanya.text = model.nazvanye

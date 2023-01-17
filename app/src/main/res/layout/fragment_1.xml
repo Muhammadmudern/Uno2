@@ -9,8 +9,8 @@
     app:navGraph="@navigation/main_navigation"
     app:defaultNavHost = "true"
     android:background="@color/white"
-    tools:context=".Fragment1"
-    tools:layuot = "@layout/enabled_item_shop">
+    tools:context=".Fragments.Fragment1"
+    tools:layuot = "@layout/disabled_item_shop">
 
 
     <ScrollView
@@ -30,10 +30,11 @@
         android:id="@+id/rv_shop_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/enabled_item_shop"/>
+        tools:listitem="@layout/disabled_item_shop"/>
 </FrameLayout>

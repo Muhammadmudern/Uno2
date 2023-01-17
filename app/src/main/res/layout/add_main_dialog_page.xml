@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     app:cardBackgroundColor="@color/white"
     android:orientation="vertical"
-    tools:context=".ActionBottomDialogFragmentMainPage">
+    tools:context=".Actions.ActionBottomDialogFragmentMainPage">
 
 
     <Button

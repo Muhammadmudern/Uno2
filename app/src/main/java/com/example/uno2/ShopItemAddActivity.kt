@@ -1,14 +1,11 @@
 package com.example.uno2
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
-import android.widget.LinearLayout
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.uno2.databinding.ActivityShopItemAddBinding
+import com.example.uno2.ModelsAndAdapters.PaymentAdapter
+import com.example.uno2.ModelsAndAdapters.PaymentModel
 import java.util.ArrayList
 
 class ShopItemAddActivity : AppCompatActivity() {

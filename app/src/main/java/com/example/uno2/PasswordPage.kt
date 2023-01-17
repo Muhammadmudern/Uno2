@@ -23,7 +23,7 @@ open class PasswordPage : AppCompatActivity() {
     private lateinit var text8: String
     private lateinit var text9: String
     private var clickOnBackSpace: Int = 4
-    private var true_Pass = listOf<String>("4","0","3","4")
+    private var true_Pass = listOf<String>("0","0","0","0")
     private lateinit var item: String
 
 
