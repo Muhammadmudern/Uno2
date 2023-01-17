@@ -32,6 +32,13 @@ class Large_Main_Page : AppCompatActivity() {
         viewPager2 = findViewById(R.id.view_pager)
         adapter = FragmentAdapter(supportFragmentManager, lifecycle)
         viewPager2.adapter = adapter
+
+        // изменения текста в Tab
+        tabLayout.setTabTextColors(
+            resources.getColor(R.color.white),
+            resources.getColor(R.color.white)
+        );
+
         val button = findViewById<LinearLayout>(R.id.nextPage)
         button.setOnClickListener{
             val intent = Intent(this, ShopItemAddActivity::class.java)

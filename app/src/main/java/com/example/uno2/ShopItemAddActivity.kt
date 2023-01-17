@@ -21,10 +21,7 @@ class ShopItemAddActivity : AppCompatActivity() {
         setContentView(R.layout.activity_shop_item_add)
         HideActionBar()
 
-
-
         Lorem_Text =findViewById(R.id.recycle_view)
-
     }
 
     private fun setRecycleView() {
