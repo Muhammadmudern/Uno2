@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import com.example.uno2.R
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.android.synthetic.main.add_main_dialog_page.view.*
@@ -20,7 +21,11 @@ class ActionBottomDialogFragmentMainPage: BottomSheetDialogFragment() {
 
         nextPage.setOnClickListener {
             openButtomShee1()
+            dismiss()
         }
+
+        val animationFadeIn = AnimationUtils.loadAnimation(view.context, R.anim.slid_up)
+        nextPage.startAnimation(animationFadeIn)
 
         return view
     }

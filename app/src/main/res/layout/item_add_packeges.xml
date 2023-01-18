@@ -64,6 +64,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/LL_add_shop_item2"
         android:layout_width="104dp"
         android:layout_height="70dp"
         android:layout_marginStart="130dp"
@@ -88,6 +89,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/LL_add_shop_item3"
         android:layout_width="101dp"
         android:layout_height="70dp"
         android:layout_marginLeft="245dp"
