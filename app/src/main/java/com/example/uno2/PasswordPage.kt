@@ -123,18 +123,31 @@ open class PasswordPage : AppCompatActivity() {
             val view_03 = findViewById<View>(R.id.view_03)
             view_03.setBackgroundResource(R.drawable.elipse_pressed)
         }
-        if(pressButton.size == 4){
+        if(pressButton.size == 4) {
             val view_04 = findViewById<View>(R.id.view_04)
             view_04.setBackgroundResource(R.drawable.elipse_pressed)
-            if (true_Pass.toString().equals(pressButton.toString())){
-                val intent = Intent(this, Large_Main_Page::class.java)
-                startActivity(intent)
-            }
-            else{
-                Toast.makeText(applicationContext, "Пароль не верный", Toast.LENGTH_SHORT).show()
-            }
+            clearCircleIfIsNotTrue()
         }
+    }
 
+    private fun clearCircleIfIsNotTrue(){
+        if (true_Pass.toString().equals(pressButton.toString())) {
+            val intent = Intent(this, Large_Main_Page::class.java)
+            startActivity(intent)
+            finish()
+        } else {
+            Toast.makeText(applicationContext, "Пароль не верный", Toast.LENGTH_SHORT).show()
+            pressButton.clear()
+            Thread.sleep(500)
+            val view_01 = findViewById<View>(R.id.view_01)
+            view_01.setBackgroundResource(R.drawable.elipse_code)
+            val view_02 = findViewById<View>(R.id.view_02)
+            view_02.setBackgroundResource(R.drawable.elipse_code)
+            val view_03 = findViewById<View>(R.id.view_03)
+            view_03.setBackgroundResource(R.drawable.elipse_code)
+            val view_04 = findViewById<View>(R.id.view_04)
+            view_04.setBackgroundResource(R.drawable.elipse_code)
+        }
     }
 
     private fun OnPressBackSpace(){

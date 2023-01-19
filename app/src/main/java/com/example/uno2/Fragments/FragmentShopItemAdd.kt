@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.uno2.Actions.ActionButton
 import com.example.uno2.Large_Main_Page
+import com.example.uno2.ShopItemCountAdd
 import com.example.uno2.databinding.FragmentShopItemAddBinding
 
 
@@ -25,6 +26,7 @@ class FragmentShopItemAdd : Fragment() {
         bind.imageViewBack.setOnClickListener{
             val intent = Intent(this@FragmentShopItemAdd.requireContext(), Large_Main_Page::class.java)
             startActivity(intent)
+            activity?.finish()
         }
 
         bind.buttoncloseItem.setOnClickListener {
@@ -36,6 +38,7 @@ class FragmentShopItemAdd : Fragment() {
                 return_answer_for_close = true
                 val intent = Intent(this@FragmentShopItemAdd.requireContext(), Large_Main_Page::class.java)
                 startActivity(intent)
+                activity?.finish()
             }
 
             mAlertDialog.setNegativeButton("Отменить"){dialog, id ->
@@ -44,15 +47,13 @@ class FragmentShopItemAdd : Fragment() {
             mAlertDialog.show()
         }
 
-        bind.addNewItem.setOnClickListener { openButtomSheet3() }
+        bind.addNewItem.setOnClickListener {
+            val intent = Intent(this@FragmentShopItemAdd.requireContext(), ShopItemCountAdd::class.java)
+            startActivity(intent)
+        }
 
 
         return bind.root
-    }
-
-    fun openButtomSheet3(){
-        val addItemBottomDialogFragment = ActionButton.newInstace3()
-        addItemBottomDialogFragment.show(parentFragmentManager, ActionButton.TAG3)
     }
 
 }

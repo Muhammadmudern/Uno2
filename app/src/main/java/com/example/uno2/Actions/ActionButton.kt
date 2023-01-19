@@ -11,10 +11,5 @@ class ActionButton {
         fun newInstace2(): ActionButtonDialogFragmentStuffPackege {
             return ActionButtonDialogFragmentStuffPackege()
         }
-
-        const val TAG3 = "ActionButtomDialog"
-        fun newInstace3(): ActionBottomDialogFragmentMainPage {
-            return ActionBottomDialogFragmentMainPage()
-        }
     }
 }

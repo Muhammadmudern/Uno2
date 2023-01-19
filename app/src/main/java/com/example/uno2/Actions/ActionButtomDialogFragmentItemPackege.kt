@@ -26,7 +26,6 @@ class ActionButtomDialogFragmentItemPackege: BottomSheetDialogFragment(){
         val LL_add_shop_item3 = view.LL_add_shop_item3
 
         backPage.setOnClickListener{
-            openButtomSheet3()
             dismiss()
         }
 
@@ -50,10 +49,5 @@ class ActionButtomDialogFragmentItemPackege: BottomSheetDialogFragment(){
     fun openButtomSheet2(){
         val addItemBottomDialogFragment = ActionButton.newInstace2()
         addItemBottomDialogFragment.show(parentFragmentManager, ActionButton.TAG2)
-    }
-
-    fun openButtomSheet3(){
-        val addItemBottomDialogFragment = ActionButton.newInstace3()
-        addItemBottomDialogFragment.show(parentFragmentManager, ActionButton.TAG3)
     }
 }
