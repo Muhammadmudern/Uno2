@@ -9,59 +9,45 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.uno2.Domain.ShopItem
+import com.example.uno2.ModelsAndAdapters.DataItemTable
+import com.example.uno2.ModelsAndAdapters.ItemTableAdapter
 import com.example.uno2.ModelsAndAdapters.Large_Main_Page_Model
 import com.example.uno2.R
 import com.example.uno2.ShopItemAddActivity
 
 class Fragment2 : Fragment() {
-    private lateinit var viewModel: Large_Main_Page_Model
-    private lateinit var ll_shopList_ena: LinearLayout
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    private lateinit var recyclerViewTable: RecyclerView
+    private lateinit var itemList: ArrayList<DataItemTable>
+    private lateinit var ItemTableAdapter: ItemTableAdapter
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_1, container, false)
-        ll_shopList_ena = view.findViewById(R.id.ll_shopList_ena)
-        viewModel = ViewModelProvider(this)[Large_Main_Page_Model::class.java]
-        viewModel.shopList.observe(viewLifecycleOwner){
-            showList(it)
-        }
+        val view = inflater.inflate(R.layout.fragment_2, container, false)
+
+        recyclerViewTable = view.findViewById(R.id.recyclerView02)
+        recyclerViewTable.setHasFixedSize(true)
+        recyclerViewTable.layoutManager = GridLayoutManager(this@Fragment2.context, 3)
+
+        itemList = ArrayList()
+        addDataList()
+
+        ItemTableAdapter = ItemTableAdapter((itemList))
+        recyclerViewTable.adapter = ItemTableAdapter
+
         return view
     }
 
-    private fun showList(list: List<ShopItem>){
-        ll_shopList_ena.removeAllViews()
-        for(shopItem in list){
-            val layoutId = if(shopItem.enabled){
-                R.layout.disabled_item_shop
-            }else{
-                R.layout.enabled_item_shop
-            }
-            val view = LayoutInflater.from(this@Fragment2.context).inflate(layoutId, ll_shopList_ena,false)
-            val tv_name1 = view.findViewById<TextView>(R.id.tv_name1)
-            val tv_name2 = view.findViewById<TextView>(R.id.tv_name2)
-            val tv_name3 = view.findViewById<TextView>(R.id.tv_name3)
-            tv_name1.text = shopItem.count.toString()
-            tv_name2.text = shopItem.count.toString()
-            tv_name3.text = shopItem.count.toString()
-            view.setOnClickListener {
-                val intent = Intent(view.context, ShopItemAddActivity::class.java)
-                startActivity(intent
-                )
-            }
-            tv_name2.setOnLongClickListener {
-                viewModel.changeEnableState(shopItem)
-                true
-            }
-            ll_shopList_ena.addView(view)
+    private fun addDataList() {
+        var intCount: Int = 21
+        for (i in 1 until intCount){
+            itemList.add(DataItemTable(R.drawable.bakcground_for_table_dis, i.toString(), "Hello2"))
         }
     }
-
 }

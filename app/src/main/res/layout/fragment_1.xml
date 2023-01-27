@@ -1,40 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/fragment1"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recyclerViewForTable"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:name="androidx.navigation.fragment.NavHostFragment"
-    app:navGraph="@navigation/main_navigation"
-    app:defaultNavHost = "true"
     android:background="@color/white"
-    tools:context=".Fragments.Fragment1"
-    tools:layuot = "@layout/disabled_item_shop">
-
-
-    <ScrollView
-        android:id="@+id/sv_shop_list_ena"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:ignore="DuplicateIds">
-        <LinearLayout
-            android:id="@+id/ll_shopList_ena"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"/>
-
-    </ScrollView>
+    android:layout_height="match_parent">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_shop_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
+        android:id="@+id/recyclerView01"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/disabled_item_shop"/>
-</FrameLayout>
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
