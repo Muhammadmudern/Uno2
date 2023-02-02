@@ -2,8 +2,10 @@ package com.example.uno2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.uno2.ModelsAndAdapters.ItemTableAdapter
 import com.example.uno2.ModelsAndAdapters.PaymentAdapter
 import com.example.uno2.ModelsAndAdapters.PaymentModel
 import java.util.ArrayList
@@ -17,7 +19,6 @@ class ShopItemAddActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shop_item_add)
         HideActionBar()
-
         Lorem_Text =findViewById(R.id.recycle_view)
     }
 

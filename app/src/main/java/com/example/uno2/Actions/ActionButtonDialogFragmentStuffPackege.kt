@@ -5,15 +5,33 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.uno2.ModelsAndAdapters.DataForItem
+import com.example.uno2.ModelsAndAdapters.DataForStuff
+import com.example.uno2.ModelsAndAdapters.StuffAdapter
 import com.example.uno2.R
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import kotlinx.android.synthetic.main.item_add_packeges.view.*
 import kotlinx.android.synthetic.main.item_add_packeges.view.imageViewHomePage
 import kotlinx.android.synthetic.main.item_add_packeges.view.imageViewLastPage
 import kotlinx.android.synthetic.main.item_add_packeges.view.imageViewPrint
-import kotlinx.android.synthetic.main.stuff_add_packeges.view.*
 
 class ActionButtonDialogFragmentStuffPackege: BottomSheetDialogFragment(){
+
+    private lateinit var recyclerViewStuff: RecyclerView
+    private lateinit var itemList: ArrayList<DataForStuff>
+    private lateinit var stuffAdapter: StuffAdapter
+
+//    private lateinit var getFromItem =
+
+    private val list = listOf<String>("Кола", "Редбул", "Фанта","Спрайт","Пепси","Асу",
+        "БАР", "Алко", "Напитки","На Второе","Стейки","Салаты",
+        "БАР", "Алко", "Напитки","На Второе","Стейки","Салаты",
+        "БАР", "Алко", "Напитки","На Второе","Стейки","Салаты",
+        "БАР", "Алко", "Напитки","На Второе","Стейки","Салаты",
+        "БАР", "Алко", "Напитки","На Второе","Стейки","Салаты",
+        "БАР", "Алко", "Напитки","На Второе","Стейки","Салаты",
+        "БАР", "Алко", "Напитки","На Второе","Стейки","Салаты",)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,12 +43,23 @@ class ActionButtonDialogFragmentStuffPackege: BottomSheetDialogFragment(){
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.stuff_add_packeges, container, false)
+
+        recyclerViewStuff = view.findViewById(R.id.recyclerViewStuff)
+        recyclerViewStuff.setHasFixedSize(true)
+        recyclerViewStuff.layoutManager = GridLayoutManager(this@ActionButtonDialogFragmentStuffPackege.context, 3)
+
+
         val backPage = view.imageViewLastPage
         val imageViewHomePage = view.imageViewHomePage
         val imageViewPrint = view.imageViewPrint
-        val LL_add_shop_stuff = view.LL_add_shop_stuff
-        val LL_add_shop_stuff2 = view.LL_add_shop_stuff2
-        val LL_add_shop_stuff3 = view.LL_add_shop_stuff3
+
+        itemList = ArrayList()
+        addDataList()
+
+        stuffAdapter = StuffAdapter((itemList))
+        recyclerViewStuff.adapter = stuffAdapter
+
+
         backPage.setOnClickListener{
             openButtomSheet1()
             dismiss()
@@ -40,9 +69,6 @@ class ActionButtonDialogFragmentStuffPackege: BottomSheetDialogFragment(){
         backPage.startAnimation(animationFadeIn)
         imageViewHomePage.startAnimation(animationFadeIn)
         imageViewPrint.startAnimation(animationFadeIn)
-        LL_add_shop_stuff.startAnimation(animationFadeIn)
-        LL_add_shop_stuff2.startAnimation(animationFadeIn)
-        LL_add_shop_stuff3.startAnimation(animationFadeIn)
 
         return view
     }
@@ -51,5 +77,11 @@ class ActionButtonDialogFragmentStuffPackege: BottomSheetDialogFragment(){
     fun openButtomSheet1(){
         val addItemBottomDialogFragment = ActionButton.newInstace1()
         addItemBottomDialogFragment.show(parentFragmentManager, ActionButton.TAG1)
+    }
+
+    private fun addDataList() {
+        for (i in 1 until 21){
+            itemList.add(DataForStuff(R.drawable.package_for_stuff, list[i]))
+        }
     }
 }

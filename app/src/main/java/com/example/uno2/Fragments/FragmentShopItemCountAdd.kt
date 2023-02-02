@@ -7,12 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.uno2.Actions.ActionButton
+import com.example.uno2.Large_Main_Page
 import com.example.uno2.ShopItemAddActivity
 import com.example.uno2.databinding.FragmentAddWithCountItemBinding
-import kotlinx.android.synthetic.main.add_main_dialog_page.*
+import com.example.uno2.Large_Main_Page.*
+import java.util.*
 
 
-class FragmentShopItemCountAdd : Fragment() {
+class FragmentShopItemCountAdd() : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,6 +24,7 @@ class FragmentShopItemCountAdd : Fragment() {
 
         bind.buttonForAddDish.setOnClickListener {
             openButtomShee1()
+
         }
 
         bind.imageViewBackToCount.setOnClickListener {
