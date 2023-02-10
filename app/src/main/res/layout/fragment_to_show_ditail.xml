@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="300dp"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginHorizontal="10dp"
-    android:layout_marginVertical="12dp"
+    android:layout_marginVertical="5dp"
     app:circularflow_defaultRadius="10dp"
+    app:cardElevation="0dp"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+        android:layout_width="302dp"
+        android:background="@color/white"
         android:layout_height="wrap_content">
 
         <TextView
@@ -19,11 +21,11 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Фри"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.077"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
@@ -35,23 +37,25 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="1800"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintHorizontal_bias="0.473"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
             tools:ignore="MissingConstraints" />
 
         <ImageView
+            android:id="@+id/imageViewMinuseStuff"
             android:layout_width="21dp"
             android:layout_height="20dp"
+            android:background="@drawable/below_background_fot_button"
             android:src="@drawable/minuse"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/TextViewStuffOnTableCount"
-            app:layout_constraintHorizontal_bias="0.908"
+            app:layout_constraintHorizontal_bias="0.94"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
@@ -62,23 +66,25 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="5"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.827"
+            app:layout_constraintHorizontal_bias="0.877"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintVertical_bias="0.0"
             tools:ignore="MissingConstraints" />
 
         <ImageView
+            android:id="@+id/imageViewPluseStuff"
             android:layout_width="21dp"
             android:layout_height="20dp"
+            android:background="@drawable/below_background_fot_button"
             android:src="@drawable/pluse"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintHorizontal_bias="0.8"
             app:layout_constraintStart_toEndOf="@+id/TextViewStuffOnTableCount"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />

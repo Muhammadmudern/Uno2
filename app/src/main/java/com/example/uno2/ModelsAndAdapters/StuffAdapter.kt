@@ -10,7 +10,7 @@ import com.example.uno2.R
 
 class StuffAdapter(private val itemList: ArrayList<DataForStuff>): RecyclerView.Adapter<StuffAdapter.StuffViewHolder>()  {
 
-    var onShopItemClickListener: ((DataForStuff) -> Unit)? = null
+    var onShopStuffClickListener: ((DataForStuff) -> Unit)? = null
 
     class StuffViewHolder(itemViewTable: View): RecyclerView.ViewHolder(itemViewTable){
         val imageViewStuff: ImageView = itemViewTable.findViewById(R.id.ImageViewForStuff)
@@ -28,13 +28,13 @@ class StuffAdapter(private val itemList: ArrayList<DataForStuff>): RecyclerView.
         holder.textViewStuff.text = item.TextViewForStuff
 
         holder.imageViewStuff.setOnClickListener {
-            onShopItemClickListener?.invoke(item)
+            onShopStuffClickListener?.invoke(item)
         }
+
+
     }
 
     override fun getItemCount(): Int {
         return itemList.size
     }
-
-
 }

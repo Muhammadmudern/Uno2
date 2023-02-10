@@ -36,8 +36,6 @@ class Large_Main_Page : AppCompatActivity() {
 
         TabLayoutMediator(tabLayout, viewPager2) { tab, position ->
             tab.text = "ЗАЛ ${(position+1)}"
-            pos = position.toString()
-            Toast.makeText(applicationContext, pos, Toast.LENGTH_SHORT).show()
         }.attach()
     }
 }

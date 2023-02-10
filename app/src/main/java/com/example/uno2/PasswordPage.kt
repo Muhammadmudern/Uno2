@@ -8,6 +8,9 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import com.example.uno2.databinding.ActivityPasswordPageBinding
+import com.google.mlkit.vision.barcode.BarcodeScannerOptions
+import com.google.mlkit.vision.barcode.common.Barcode
 import kotlinx.android.synthetic.main.activity_password_page.*
 
 open class PasswordPage : AppCompatActivity() {
@@ -25,6 +28,16 @@ open class PasswordPage : AppCompatActivity() {
     private var clickOnBackSpace: Int = 4
     private var true_Pass = listOf<String>("0","0","0","0")
     private lateinit var item: String
+
+    val operation  = BarcodeScannerOptions.Builder(
+    ).setBarcodeFormats(
+        Barcode.FORMAT_QR_CODE,
+        Barcode.FORMAT_AZTEC
+    ).build()
+
+    lateinit var binding: ActivityPasswordPageBinding
+
+//    private val REQUEST_I
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

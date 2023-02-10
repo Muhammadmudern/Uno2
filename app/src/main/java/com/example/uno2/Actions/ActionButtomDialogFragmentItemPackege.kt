@@ -23,7 +23,6 @@ class ActionButtomDialogFragmentItemPackege: BottomSheetDialogFragment(){
     private lateinit var itemList: ArrayList<DataForItem>
     private lateinit var ItemAdapter: ItemAdapter
 
-    private lateinit var itemToStuff: ArrayList<ItemToStuff>
 
     private val list = listOf<String>("БАР", "Алко", "Напитки","На Второе","Стейки","Салаты",
         "БАР", "Алко", "Напитки","На Второе","Стейки","Салаты",
@@ -73,7 +72,6 @@ class ActionButtomDialogFragmentItemPackege: BottomSheetDialogFragment(){
 
         ItemAdapter.onShopItemClickListener= {
             openButtomSheet2()
-            Log.d("MessItem", item.text.toString())
             dismiss()
         }
 

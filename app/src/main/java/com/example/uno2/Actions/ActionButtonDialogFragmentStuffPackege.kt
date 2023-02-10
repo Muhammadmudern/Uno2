@@ -5,10 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.uno2.ModelsAndAdapters.DataForItem
 import com.example.uno2.ModelsAndAdapters.DataForStuff
+import com.example.uno2.ModelsAndAdapters.DataStuffOnTable
 import com.example.uno2.ModelsAndAdapters.StuffAdapter
 import com.example.uno2.R
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
@@ -22,7 +24,6 @@ class ActionButtonDialogFragmentStuffPackege: BottomSheetDialogFragment(){
     private lateinit var itemList: ArrayList<DataForStuff>
     private lateinit var stuffAdapter: StuffAdapter
 
-//    private lateinit var getFromItem =
 
     private val list = listOf<String>("Кола", "Редбул", "Фанта","Спрайт","Пепси","Асу",
         "БАР", "Алко", "Напитки","На Второе","Стейки","Салаты",
@@ -58,6 +59,9 @@ class ActionButtonDialogFragmentStuffPackege: BottomSheetDialogFragment(){
 
         stuffAdapter = StuffAdapter((itemList))
         recyclerViewStuff.adapter = stuffAdapter
+
+
+
 
 
         backPage.setOnClickListener{
