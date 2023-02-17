@@ -13,6 +13,7 @@ import com.google.mlkit.vision.barcode.BarcodeScannerOptions
 import com.google.mlkit.vision.barcode.common.Barcode
 import kotlinx.android.synthetic.main.activity_password_page.*
 
+
 open class PasswordPage : AppCompatActivity() {
     private var pressButton: MutableList<String> = arrayListOf()
     private lateinit var text0: String
@@ -22,22 +23,14 @@ open class PasswordPage : AppCompatActivity() {
     private lateinit var text4: String
     private lateinit var text5: String
     private lateinit var text6: String
-    private lateinit var text7: String
+      private lateinit var text7: String
     private lateinit var text8: String
     private lateinit var text9: String
-    private var clickOnBackSpace: Int = 4
+    private lateinit var buttonScanner: Button
+    private lateinit var QrCode: String
     private var true_Pass = listOf<String>("0","0","0","0")
-    private lateinit var item: String
 
-    val operation  = BarcodeScannerOptions.Builder(
-    ).setBarcodeFormats(
-        Barcode.FORMAT_QR_CODE,
-        Barcode.FORMAT_AZTEC
-    ).build()
 
-    lateinit var binding: ActivityPasswordPageBinding
-
-//    private val REQUEST_I
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,6 +42,16 @@ open class PasswordPage : AppCompatActivity() {
             val intent = Intent(this, ForgetPassword::class.java)
             startActivity(intent)
             finish()
+        }
+
+        if(returnQRCode != null ){
+            QrCode = returnQRCode.toString()
+        }
+
+
+        buttonScanner =findViewById(R.id.qr_button_scanner)
+        buttonScanner.setOnClickListener {
+            startActivity(Intent(this, QRScanner::class.java))
         }
 
         val button0= findViewById<Button>(R.id.button0)
@@ -144,7 +147,7 @@ open class PasswordPage : AppCompatActivity() {
     }
 
     private fun clearCircleIfIsNotTrue(){
-        if (true_Pass.toString().equals(pressButton.toString())) {
+        if (QrCode.equals(pressButton.toString()) || true_Pass.toString().equals(pressButton.toString())) {
             val intent = Intent(this, Large_Main_Page::class.java)
             startActivity(intent)
             finish()
@@ -189,4 +192,5 @@ open class PasswordPage : AppCompatActivity() {
     private fun HideActionBar() {
         supportActionBar?.hide()
     }
+
 }

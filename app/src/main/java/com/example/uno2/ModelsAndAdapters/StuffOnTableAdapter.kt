@@ -1,6 +1,8 @@
 package com.example.uno2.ModelsAndAdapters
 
 
+import android.media.Image
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,9 +11,11 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.uno2.R
+import kotlin.coroutines.coroutineContext
 
 class StuffOnTableAdapter: RecyclerView.Adapter<StuffOnTableAdapter.StuffOnTableViewHolder>()  {
-
+    private lateinit var valueCountPluse: String
+    private lateinit var valueCountMinuse: String
     val SOTList = ArrayList<DataStuffOnTable>()
 
     class StuffOnTableViewHolder(StuffOnTableView: View): RecyclerView.ViewHolder(StuffOnTableView){
@@ -35,12 +39,21 @@ class StuffOnTableAdapter: RecyclerView.Adapter<StuffOnTableAdapter.StuffOnTable
         holder.textViewPriceStuff.text = item.priceStuff
         holder.textViewCountStuff.text = item.countStuff
 
+
         holder.imageViewPluseStuff.setOnClickListener {
-            (((holder.textViewCountStuff.text).toString()).toInt() + 1).toString()
+            valueCountPluse = holder.textViewCountStuff.text.toString()
+            valueCountPluse = (valueCountPluse.toInt()+ 1).toString()
+            holder.textViewCountStuff.text = valueCountPluse
         }
 
         holder.imageViewMinuseStuff.setOnClickListener {
-            (((holder.textViewCountStuff.text).toString()).toInt() - 1).toString()
+            valueCountMinuse = holder.textViewCountStuff.text.toString()
+            valueCountMinuse = (valueCountMinuse.toInt()- 1).toString()
+            if(valueCountMinuse.toInt() < 0){
+                valueCountMinuse = "0"
+            }
+            holder.textViewCountStuff.text = valueCountMinuse
+
         }
 
     }

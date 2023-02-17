@@ -38,8 +38,9 @@
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno2/app/src/main/res/layout/activity_login.xml" value="0.3625" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno2/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno2/app/src/main/res/layout/activity_main_activity2_delete.xml" value="0.17395833333333333" />
-        <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno2/app/src/main/res/layout/activity_password_page.xml" value="0.4961779013203614" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno2/app/src/main/res/layout/activity_password_page.xml" value="0.75" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno2/app/src/main/res/layout/activity_qrscane.xml" value="0.25" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno2/app/src/main/res/layout/activity_qrscanner.xml" value="0.33" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno2/app/src/main/res/layout/activity_scrolling.xml" value="0.3625" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno2/app/src/main/res/layout/activity_shop_item_add.xml" value="0.2" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno2/app/src/main/res/layout/activity_shop_item_count_add.xml" value="0.25" />
@@ -63,7 +64,7 @@
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno2/app/src/main/res/layout/fragment_shop_item_add.xml" value="0.9" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno2/app/src/main/res/layout/fragment_shop_item_count_add.xml" value="0.35778985507246375" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno2/app/src/main/res/layout/fragment_to_add_shop_item.xml" value="0.365625" />
-        <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno2/app/src/main/res/layout/fragment_to_show_ditail.xml" value="0.1343001261034048" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno2/app/src/main/res/layout/fragment_to_show_ditail.xml" value="0.33" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno2/app/src/main/res/layout/fragment_whit_add_on_shop.xml" value="0.16" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno2/app/src/main/res/layout/item_add_packeges.xml" value="0.33" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Uno2/app/src/main/res/layout/item_add_packeges_container.xml" value="0.5" />

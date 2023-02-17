@@ -9,7 +9,7 @@ import android.os.Handler
 import android.widget.ImageView
 import android.widget.Toast
 
-class MainActivity : AppCompatActivity() {
+class  MainActivity : AppCompatActivity() {
     private var downTimer: Int = 1000
 
 

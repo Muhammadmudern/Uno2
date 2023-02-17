@@ -3,30 +3,38 @@ package com.example.uno2.Fragments
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.media.Image
+import android.media.ImageReader
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.uno2.Actions.ActionButton
+import com.example.uno2.Actions.ActionButtonDialogFragmentStuffPackege
 import com.example.uno2.Large_Main_Page
 import com.example.uno2.ShopItemAddActivity
 import com.example.uno2.Large_Main_Page.*
 import com.example.uno2.ModelsAndAdapters.*
 import com.example.uno2.R
 import com.example.uno2.databinding.FragmentAddWithCountItemBinding
+import kotlinx.android.synthetic.main.stuff_add_packeges.*
 import java.util.*
+import kotlin.collections.ArrayList
 
 
-class FragmentShopItemCountAdd() : Fragment() {
+class FragmentShopItemCountAdd : Fragment(){
 
     private lateinit var recyclerViewStuffOnTable: RecyclerView
     private lateinit var stuffOnTableAdapter: StuffOnTableAdapter
+    private lateinit var stuffOnTable: ArrayList<DataStuffOnTable>
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -42,9 +50,15 @@ class FragmentShopItemCountAdd() : Fragment() {
         recyclerViewStuffOnTable.layoutManager = GridLayoutManager(this@FragmentShopItemCountAdd.context, 1)
 
 
+        stuffOnTable = ArrayList()
         stuffOnTableAdapter = StuffOnTableAdapter()
         recyclerViewStuffOnTable.adapter = stuffOnTableAdapter
 
+//        addDataList()
+
+        view.findViewById<Button>(R.id.buttonTest).setOnClickListener {
+            addDataList()
+        }
 
         // this bind we use for click on ButtonSheet
 
@@ -57,8 +71,6 @@ class FragmentShopItemCountAdd() : Fragment() {
         imageViewBackToCount.setOnClickListener {
             startActivity()
         }
-
-        addDataList()
 
         return view
     }
@@ -80,7 +92,6 @@ class FragmentShopItemCountAdd() : Fragment() {
 
     private fun addDataList() {
 //        Toast.makeText(context, SOTList.toString(), Toast.LENGTH_SHORT).show()
-        for (i in 1 until 21){
             stuffOnTableAdapter.addStuffOnTable(
                 DataStuffOnTable(
                     R.drawable.pluse,
@@ -89,6 +100,5 @@ class FragmentShopItemCountAdd() : Fragment() {
                     "1800",
                     "1",)
             )
-        }
     }
 }

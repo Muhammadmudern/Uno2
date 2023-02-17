@@ -12,14 +12,16 @@ class StuffAdapter(private val itemList: ArrayList<DataForStuff>): RecyclerView.
 
     var onShopStuffClickListener: ((DataForStuff) -> Unit)? = null
 
-    class StuffViewHolder(itemViewTable: View): RecyclerView.ViewHolder(itemViewTable){
-        val imageViewStuff: ImageView = itemViewTable.findViewById(R.id.ImageViewForStuff)
-        val textViewStuff: TextView = itemViewTable.findViewById(R.id.TextViewForStuff)
+    class StuffViewHolder(stuffViewTable: View): RecyclerView.ViewHolder(stuffViewTable){
+        val imageViewStuff: ImageView = stuffViewTable.findViewById(R.id.ImageViewForStuff)
+        val textViewStuff: TextView = stuffViewTable.findViewById(R.id.TextViewForStuff)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StuffViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.stuff_add_packages_container, parent, false)
         return StuffViewHolder(view)
+
     }
 
     override fun onBindViewHolder(holder: StuffViewHolder, position: Int) {
@@ -28,7 +30,7 @@ class StuffAdapter(private val itemList: ArrayList<DataForStuff>): RecyclerView.
         holder.textViewStuff.text = item.TextViewForStuff
 
         holder.imageViewStuff.setOnClickListener {
-            onShopStuffClickListener?.invoke(item)
+              onShopStuffClickListener
         }
 
 

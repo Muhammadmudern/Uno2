@@ -49,7 +49,6 @@ class ActionButtomDialogFragmentItemPackege: BottomSheetDialogFragment(){
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.item_add_packeges, container, false)
-        val view2 = inflater.inflate(R.layout.item_add_packeges_container, container, false)
 
         recyclerViewItem = view.findViewById(R.id.recyclerViewItem)
         recyclerViewItem.setHasFixedSize(true)
@@ -68,7 +67,6 @@ class ActionButtomDialogFragmentItemPackege: BottomSheetDialogFragment(){
         ItemAdapter = ItemAdapter((itemList))
         recyclerViewItem.adapter = ItemAdapter
 
-        val item = view2.findViewById<TextView>(R.id.TextViewForItem)
 
         ItemAdapter.onShopItemClickListener= {
             openButtomSheet2()

@@ -1,15 +1,12 @@
 package com.example.uno2.ModelsAndAdapters
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.uno2.R
-import kotlin.coroutines.coroutineContext
 
 class ItemAdapter(private val itemList: ArrayList<DataForItem>): RecyclerView.Adapter<ItemAdapter.ItemViewHolder>()  {
 
@@ -29,6 +26,7 @@ class ItemAdapter(private val itemList: ArrayList<DataForItem>): RecyclerView.Ad
         val item = itemList[position]
         holder.imageViewItem.setImageResource(item.ImageViewItem)
         holder.textViewItem.text = item.TextViewForItem
+
 
         holder.imageViewItem.setOnClickListener {
             onShopItemClickListener?.invoke(item)
