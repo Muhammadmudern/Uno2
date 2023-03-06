@@ -1,15 +1,19 @@
 package com.example.uno2.Fragments
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.uno2.Actions.ActionButton
 import com.example.uno2.Large_Main_Page
+import com.example.uno2.ModelsAndAdapters.ItemTableAdapter
+import com.example.uno2.R
 import com.example.uno2.ShopItemCountAdd
 import com.example.uno2.databinding.FragmentShopItemAddBinding
 
@@ -17,6 +21,7 @@ import com.example.uno2.databinding.FragmentShopItemAddBinding
 class FragmentShopItemAdd : Fragment() {
     public var return_answer_for_close: Boolean = false
 
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,6 +33,7 @@ class FragmentShopItemAdd : Fragment() {
             startActivity(intent)
             activity?.finish()
         }
+        bind.TextViewTable.text = "Стол ${view?.findViewById<TextView>(R.id.TextViewTableCount).toString()}"
 
         bind.buttoncloseItem.setOnClickListener {
             val mAlertDialog = AlertDialog.Builder(this@FragmentShopItemAdd.requireContext())
