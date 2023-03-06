@@ -13,29 +13,20 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <ImageView
-            android:id="@+id/ImageViewForItem"
+
+        <Button
+            android:id="@+id/ButtonViewForItem"
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:scaleType="fitXY"
-            android:src="@drawable/package_for_item"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
-        <TextView
-            android:id="@+id/TextViewForItem"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Пиво"
-            android:textColor="@color/white"
-            android:textSize="16dp"
-            android:gravity="center"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/package_for_item"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
+            android:text="Пиво"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:gravity="center"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

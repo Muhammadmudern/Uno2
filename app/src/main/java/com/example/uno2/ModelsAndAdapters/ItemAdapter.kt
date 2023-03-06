@@ -3,6 +3,7 @@ package com.example.uno2.ModelsAndAdapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -13,8 +14,7 @@ class ItemAdapter(private val itemList: ArrayList<DataForItem>): RecyclerView.Ad
     var onShopItemClickListener: ((DataForItem) -> Unit)? = null
 
     class ItemViewHolder(itemViewTable: View): RecyclerView.ViewHolder(itemViewTable){
-        val imageViewItem: ImageView = itemViewTable.findViewById(R.id.ImageViewForItem)
-        val textViewItem: TextView = itemViewTable.findViewById(R.id.TextViewForItem)
+        val buttonViewItem: Button = itemViewTable.findViewById(R.id.ButtonViewForItem)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
@@ -24,11 +24,11 @@ class ItemAdapter(private val itemList: ArrayList<DataForItem>): RecyclerView.Ad
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = itemList[position]
-        holder.imageViewItem.setImageResource(item.ImageViewItem)
-        holder.textViewItem.text = item.TextViewForItem
+        holder.buttonViewItem.setBackgroundResource(item.ImageViewItem)
+        holder.buttonViewItem.text = item.TextViewForItem
 
 
-        holder.imageViewItem.setOnClickListener {
+        holder.buttonViewItem.setOnClickListener {
             onShopItemClickListener?.invoke(item)
         }
 
