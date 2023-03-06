@@ -1,6 +1,7 @@
 package com.example.uno2.ModelsAndAdapters
 
 
+import android.content.Context
 import android.media.Image
 import android.util.Log
 import android.view.LayoutInflater
@@ -17,6 +18,7 @@ class StuffOnTableAdapter: RecyclerView.Adapter<StuffOnTableAdapter.StuffOnTable
     private lateinit var valueCountPluse: String
     private lateinit var valueCountMinuse: String
     val SOTList = ArrayList<DataStuffOnTable>()
+    private lateinit var context: Context
 
     class StuffOnTableViewHolder(StuffOnTableView: View): RecyclerView.ViewHolder(StuffOnTableView){
         val textViewNameStuff: TextView = StuffOnTableView.findViewById(R.id.TextViewStuffOnTableName)
@@ -28,6 +30,7 @@ class StuffOnTableAdapter: RecyclerView.Adapter<StuffOnTableAdapter.StuffOnTable
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StuffOnTableViewHolder {
+        context = parent.context
         val view = LayoutInflater.from(parent.context).inflate(R.layout.fragment_to_show_ditail, parent, false)
         return StuffOnTableViewHolder(view)
 
@@ -43,6 +46,10 @@ class StuffOnTableAdapter: RecyclerView.Adapter<StuffOnTableAdapter.StuffOnTable
         holder.imageViewPluseStuff.setOnClickListener {
             valueCountPluse = holder.textViewCountStuff.text.toString()
             valueCountPluse = (valueCountPluse.toInt()+ 1).toString()
+            if(valueCountPluse.toInt() > 50){
+                valueCountPluse = "50"
+                Toast.makeText(context, "Слишком большое количество", Toast.LENGTH_SHORT).show()
+            }
             holder.textViewCountStuff.text = valueCountPluse
         }
 
